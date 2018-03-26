@@ -4,6 +4,8 @@ const darksky = require('./weather.js');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 8080;
+
 var app = express();
 var weather = '';
 
@@ -79,7 +81,7 @@ app.get('/404', (request, response) => {
 	})
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
 	console.log('Server is up on the port 8080');
 	darksky.getWeather(0.1275, 0.1278).then((result) => {
     	weather = String(result.temperature) + 'F in London';
