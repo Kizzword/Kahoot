@@ -82,7 +82,7 @@ app.get('/404', (request, response) => {
 })
 
 app.listen(port, () => {
-	console.log('Server is up on the port 8080');
+	console.log(`Server is up on the port ${port}`);
 	darksky.getWeather(0.1275, 0.1278).then((result) => {
     	weather = String(result.temperature) + 'F in London';
     });
