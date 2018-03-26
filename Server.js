@@ -38,17 +38,17 @@ hbs.registerHelper('message', (text) => {
 // 	res.render('maintain.hbs')
 // })
 
-app.get('/', (request, response) => {
-	// response.send('<h1>Hello Express</h1>!');
-	response.send({
-		name: 'Jimmy Chien',
-		school: [
-			'BCIT',
-			'SFU',
-			'UBC'
-		]
-	})
-});
+// app.get('/', (request, response) => {
+// 	// response.send('<h1>Hello Express</h1>!');
+// 	response.send({
+// 		name: 'Jimmy Chien',
+// 		school: [
+// 			'BCIT',
+// 			'SFU',
+// 			'UBC'
+// 		]
+// 	})
+// });
 
 app.get('/info', (request, response) => {
 	response.render('about.hbs', {
@@ -59,19 +59,19 @@ app.get('/info', (request, response) => {
 });
 
 
-app.get('/', (request, response) => {
-	response.render('home.hbs', {
-		title: 'home page'
+// app.get('/', (request, response) => {
+// 	response.render('home.hbs', {
+// 		title: 'home page'
 		
-	});
-});
+// 	});
+// });
 
-app.get('/weather', (request, response) => {
-	response.render('weather.hbs', {
-		title: 'weather page',
-		weather: weather
-	});
-});
+// app.get('/weather', (request, response) => {
+// 	response.render('weather.hbs', {
+// 		title: 'weather page',
+// 		weather: weather
+// 	});
+// });
 
 
 
